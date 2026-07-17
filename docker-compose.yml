@@ -1,0 +1,14 @@
+services:
+  fintech-api:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      - PORT=8080
+      - DB_PATH=/app/data/fintech.db
+      - JWT_SECRET=change-me-in-production
+    volumes:
+      - fintech-data:/app/data
+
+volumes:
+  fintech-data:
