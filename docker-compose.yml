@@ -6,7 +6,7 @@ services:
     environment:
       - PORT=8080
       - DB_PATH=/app/data/fintech.db
-      - JWT_SECRET=change-me-in-production
+      - JWT_SECRET=${JWT_SECRET}
     volumes:
       - fintech-data:/app/data
 
